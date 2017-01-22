@@ -7,6 +7,10 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { MaterialModule } from '@angular/material';
 
+// services
+import { SessionService } from './shared/services/session.service';
+
+// root module
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -20,7 +24,9 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    SessionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
