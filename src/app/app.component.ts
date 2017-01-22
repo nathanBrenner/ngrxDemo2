@@ -14,4 +14,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(){}
+
+  onSignOut(){
+    // todo
+  }
 }
