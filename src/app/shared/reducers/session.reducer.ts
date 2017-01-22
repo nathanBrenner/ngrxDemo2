@@ -30,7 +30,6 @@ const defaultSession: Session = {
 
 export const sessionReducer: ActionReducer<Session> = (state: Session = defaultSession, {type, payload}: Action) => {
 	console.log('action', type, payload);
-	
 	switch(type){
 		case SESSION_ACTIONS.GET_USER.SUCCESS:
 			return Object.assign({}, state, {user: payload});
