@@ -19,10 +19,25 @@ import { SessionService } from './shared/services/session.service';
 // root component
 import { AppComponent } from './app.component';
 
+// container components
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+// child components
+import { NavbarComponent } from './navbar/navbar.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
+    LoginComponent,
+    RegistrationComponent,
+    HomeComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     StoreModule.provideStore({
