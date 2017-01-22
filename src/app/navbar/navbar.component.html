@@ -1,3 +1,32 @@
-<p>
-  navbar works!
-</p>
+<md-toolbar color="primary">
+	<a [routerLink]="['/']" md-button>NgrxDemo</a>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+	<div *ngIf="!user.id">
+		<a 
+			md-raised-button 
+			[routerLink]="['/registration']"
+			color="accent"
+			class="navBtn"
+		>Registration</a>
+		<a 
+			md-raised-button 
+			[routerLink]="['/login']" 
+			color="accent"
+			class="navBtn"
+		>Login</a>
+	</div>
+	<button 
+		md-raised-button
+		color="accent"
+		[mdMenuTriggerFor]="menu" 
+		*ngIf="user.id">
+   {{user.username}}
+	</button>
+
+	<md-menu #menu="mdMenu">
+		<button md-menu-item> Settings </button>
+		<button md-menu-item (click)="onSignOut.emit()"> Sign Out </button>
+	</md-menu>
+</md-toolbar>
