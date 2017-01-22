@@ -16,6 +16,9 @@ import { sessionReducer } from './shared/reducers/session.reducer';
 // services
 import { SessionService } from './shared/services/session.service';
 
+// routing
+import { AppRoutingModule } from './app.routing';
+
 // root component
 import { AppComponent } from './app.component';
 
@@ -49,6 +52,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ReactiveFormsModule,
     HttpModule,
     MaterialModule.forRoot(),
+    AppRoutingModule,
   ],
   providers: [
     SessionService
