@@ -30,6 +30,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 // child components
 import { NavbarComponent } from './navbar/navbar.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-form-question.component';
 
 
 
@@ -41,6 +43,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     RegistrationComponent,
     HomeComponent,
     PageNotFoundComponent,
+    DynamicFormComponent,
+    DynamicFormQuestionComponent,
   ],
   imports: [
     StoreModule.provideStore({

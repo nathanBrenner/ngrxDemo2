@@ -1,0 +1,12 @@
+<div [formGroup]="form">
+  <div [ngSwitch]="question.controlType">
+    <md-input-container>
+      <input md-input *ngSwitchCase="'textbox'" 
+        placeholder="{{question.label}}" 
+        [formControlName]="question.key"
+        [id]="question.key" 
+        type="{{question.type}}"
+        required>
+    </md-input-container>
+  </div>
+</div>
