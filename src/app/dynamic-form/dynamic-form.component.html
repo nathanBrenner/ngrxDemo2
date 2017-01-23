@@ -1,3 +1,10 @@
-<p>
-  dynamic-form works!
-</p>
+<div>
+  <form (ngSubmit)="onSubmit.emit(form.value)" [formGroup]="form">
+    <div *ngFor="let question of questions" class="form-row">
+      <df-question [question]="question" [form]="form"></df-question>
+    </div>
+    <div class="form-row">
+      <button md-raised-button type="submit" [disabled]="!form.valid">submit</button>
+    </div>
+  </form>
+</div>
