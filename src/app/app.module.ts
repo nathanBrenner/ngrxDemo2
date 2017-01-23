@@ -19,6 +19,9 @@ import { HttpWrapperService } from './shared/services/http-wrapper.service';
 import { QuestionService } from './shared/services/question.service';
 import { SessionService } from './shared/services/session.service';
 
+// effects:
+import { SessionEffects } from './shared/effects/session.effects';
+
 // routing
 import { AppRoutingModule } from './app.routing';
 
@@ -50,6 +53,7 @@ import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-fo
     DynamicFormQuestionComponent,
   ],
   imports: [
+    EffectsModule.run(SessionEffects),
     StoreModule.provideStore({
       error: errorReducer,
       session: sessionReducer
