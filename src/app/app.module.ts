@@ -14,6 +14,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { sessionReducer } from './shared/reducers/session.reducer';
 
 // services
+import { QuestionService } from './shared/services/question.service';
 import { SessionService } from './shared/services/session.service';
 
 // routing
@@ -59,6 +60,7 @@ import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-fo
     AppRoutingModule,
   ],
   providers: [
+    QuestionService,
     SessionService
   ],
   bootstrap: [AppComponent]
