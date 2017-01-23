@@ -1,5 +1,10 @@
 # NgrxDemo2
 
+Step by step [tutorial](https://github.com/nathanBrenner/ngrxDemo2)
+
+Each step is a branch.  Start on master, following the tutorial each step will reflect the branch name.
+
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.21.
 
 ## Development server
