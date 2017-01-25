@@ -7,7 +7,7 @@ import { Store } from '@ngrx/store'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  session$;
+  session$; // $ is a convention to mark the property as of a rxjs Subject
 
   constructor(private _store: Store<any>){
     this.session$ = _store.select('session');
